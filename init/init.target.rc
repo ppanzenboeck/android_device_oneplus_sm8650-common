@@ -124,6 +124,8 @@ on boot
     chmod 0660 /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
+    chown system system /sys/kernel/oplus_display/adfr_config
+    chmod 0660 /sys/kernel/oplus_display/adfr_config
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -181,6 +183,19 @@ on property:sys.shutdown.requested=*
 
 on property:vold.decrypt=trigger_restart_framework
    start vendor.cnss_diag
+
+on property:debug.ltpo_features=1
+    setprop persist.vendor.ltpo_features 1
+    write /sys/kernel/oplus_display/adfr_config 0x109f
+
+on property:debug.ltpo_features=0
+    setprop persist.vendor.ltpo_features 0
+    write /sys/kernel/oplus_display/adfr_config 0x0
+
+on property:persist.vendor.ltpo_features=1 && property:vendor.post_boot.parsed=1
+    write /sys/kernel/oplus_display/adfr_config 0x109f
+
+on property:persist.vendor.ltpo_features=0 && property:vendor.post_boot.parsed=1
 
 service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main
