@@ -534,3 +534,7 @@ $(call inherit-product-if-exists, vendor/lindroid/lindroid.mk)
 
 # GameBar Performance Overlay
 $(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
+
+# Oplus IR
+$(call inherit-product-if-exists, vendor/oneplus/ir/ir.mk)
+
