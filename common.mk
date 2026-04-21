@@ -522,6 +522,7 @@ $(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk)
 # Derp Build Type
 DERPFEST_BUILD_TYPE := Official
 TARGET_DISABLE_EPPE := true
+DERPFEST_VERSION_APPEND_TIME_OF_DAY := true
 
 # Remove Packages
 PRODUCT_PACKAGES += \
@@ -529,3 +530,7 @@ PRODUCT_PACKAGES += \
 
 # ViPER4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+# Lindroid
+$(call inherit-product-if-exists, vendor/lindroid/lindroid.mk)
+
