@@ -1,0 +1,6 @@
+# Allow thermal-engine (v2) to manage its required capabilities
+# This is required by the stock blob and fixes the wakelock spam
+# from avc: denied { dac_read_search } and { dac_override }
+allow vendor_thermal-engine self:capability { dac_read_search dac_override };
+allow vendor_thermal-engine sysfs_thermal:file r_file_perms;
+allow vendor_thermal-engine sysfs_thermal:dir r_dir_perms;
