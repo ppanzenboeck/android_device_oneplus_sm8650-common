@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2573_16.0.3.500(EX01)).
+## are from OnePlus 12 (CPH2573_16.0.2.400(EX01)).
 
 # Current blobs with deps disabled:
 # libqvrservice depends on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk, android.hardware.graphics.allocator-V2-ndk-source
@@ -479,9 +479,9 @@ vendor/lib64/libosensenativeproxy_client.so;MODULE_SUFFIX=_vendor
 
 # OPLUS Charger
 odm/bin/hw/gauged
-odm/bin/hw/vendor.oplus.hardware.charger-V10-service
+odm/bin/hw/vendor.oplus.hardware.charger-V9-service
 odm/bin/hw/wlschgd
-odm/etc/init/vendor.oplus.hardware.charger-V10-service.rc
+odm/etc/init/vendor.oplus.hardware.charger-V9-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/etc/charge.cfg
 odm/lib64/libGaiaClient_vnd.so
