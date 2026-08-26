@@ -6,4 +6,9 @@
 <resources>
     <!-- Doze: does the long press sensor need a proximity check? -->
     <bool name="doze_long_press_proximity_check">true</bool>
+
+    <!-- Path to fast charging status file to support OEM fast charging -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/voocchg_ing</string>
+    <string name="config_oemFastChargerStatusPath2" translatable="false">/sys/class/oplus_chg/usb/voocchg_ing</string>
+    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
 </resources>
