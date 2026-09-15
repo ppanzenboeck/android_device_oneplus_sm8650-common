@@ -1,0 +1,16 @@
+# SELinux Treble Labeling tracking list for sm8650-common
+# Exempts platform apps requiring direct vendor access from coredomain enforcement
+
+non_coredomain_for_platform_apps:
+  - apk: GameBar.apk
+    bug: 0
+  - name: com.android.gamebar
+    bug: 0
+  - apk: ViPER4AndroidFX.apk
+    bug: 0
+  - name: com.wstxda.viper4android
+    bug: 0
+  - apk: OplusCamera.apk
+    bug: 0
+  - name: com.oplus.camera
+    bug: 0

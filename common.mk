@@ -532,3 +532,7 @@ $(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
 # Oplus IR
 $(call inherit-product-if-exists, vendor/oneplus/ir/ir.mk)
 
+# SELinux Treble Labeling
+PRODUCT_SELINUX_TREBLE_LABELING_TRACKING_LIST_FILE := \
+    device/oneplus/sm8650-common/sepolicy/tracking_list.yaml
+PRODUCT_ENFORCE_SELINUX_TREBLE_LABELING := false
